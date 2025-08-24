@@ -4,7 +4,7 @@
 El presente proyecto consiste en el desarrollo de una **página web estática** para la presentación de una empresa.  
 Su finalidad es servir como una plataforma informativa que concentre datos relevantes sobre la organización, incluyendo sus servicios, proyectos y formas de contacto.
 
-La implementación se realizó con **HTML, CSS y JavaScript**, priorizando un diseño responsivo, ligero y de fácil acceso desde diferentes dispositivos.
+La implementación se realizará con **HTML, CSS y JavaScript**, priorizando un diseño responsivo, ligero y de fácil acceso desde diferentes dispositivos.
 
 ---
 
