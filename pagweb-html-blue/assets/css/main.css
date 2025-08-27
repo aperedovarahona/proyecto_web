@@ -1,0 +1,149 @@
+/* Custom CSS for animations and additional styles */
+
+/* Font configuration */
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.font-serif {
+  font-family: "Playfair Display", serif;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  53%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40%,
+  43% {
+    transform: translateY(-30px);
+  }
+  70% {
+    transform: translateY(-15px);
+  }
+  90% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Animation classes */
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.floating-element {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header background transition */
+.header-scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Card hover effects */
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Form focus styles */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #1e3a8a;
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+/* Intersection Observer animation classes */
+.fade-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: all 0.6s ease-out;
+}
+
+.slide-in-left {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+  transition: all 0.6s ease-out;
+}
+
+.slide-in-right {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+  transition: all 0.6s ease-out;
+}
+
+/* Initial states for animations */
+.vision-card,
+.mission-card {
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.project-card {
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.team-card {
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.contact-info,
+.contact-form {
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+/* Mobile menu transition */
+#mobile-menu {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Button hover effects */
+button {
+  transition: all 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .floating-element {
+    display: none;
+  }
+}
