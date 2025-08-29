@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empresa - Innovación que Transforma</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header id="header" class="site-header">
+    <div class="container header-container">
+      <!-- Logo -->
+      <div class="logo">
+        <div class="logo-box">E</div>
+        <span class="logo-text">Empresa</span>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-desktop">
+        <button data-target="inicio">Inicio</button>
+        <button data-target="vision">Visión</button>
+        <button data-target="mision">Misión</button>
+        <button data-target="proyectos">Proyectos</button>
+        <button data-target="equipo">Equipo</button>
+        <button data-target="contacto" class="btn-ghost">Ubicación</button>
+        <button data-target="contacto" class="btn-primary">Contacto</button>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="nav-toggle">
+        <svg id="menu-icon" class="icon" viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg id="close-icon" class="icon hidden" viewBox="0 0 24 24">
+          <path d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav id="mobile-menu" class="nav-mobile">
+      <button data-target="inicio">Inicio</button>
+      <button data-target="vision">Visión</button>
+      <button data-target="mision">Misión</button>
+      <button data-target="proyectos">Proyectos</button>
+      <button data-target="equipo">Equipo</button>
+      <button data-target="contacto" class="btn-ghost">Ubicación</button>
+      <button data-target="contacto" class="btn-primary full">Contacto</button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="container hero-container">
+      <h1 class="hero-title">Innovación que Transforma</h1>
+      <p class="hero-subtitle">Construimos el futuro con soluciones creativas y sostenibles.</p>
+      <div class="hero-buttons">
+        <button data-target="proyectos" class="btn-primary">Ver Proyectos</button>
+        <button data-target="contacto" class="btn-ghost">Contáctanos</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIÓN -->
+  <section id="vision" class="vision">
+    <div class="container">
+      <h2 class="section-title">Nuestra Visión</h2>
+      <p class="section-text">Ser líderes en innovación tecnológica y desarrollo sostenible, generando un impacto positivo en la sociedad y el medio ambiente.</p>
+    </div>
+  </section>
+
+  <!-- MISIÓN -->
+  <section id="mision" class="mision">
+    <div class="container">
+      <h2 class="section-title">Nuestra Misión</h2>
+      <p class="section-text">Proporcionar soluciones creativas que mejoren la calidad de vida de las personas, combinando tecnología, sostenibilidad y compromiso social.</p>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="proyectos">
+    <div class="container">
+      <h2 class="section-title">Proyectos Destacados</h2>
+      <div class="proyectos-grid">
+        <div class="proyecto-card">
+          <h3>Proyecto 1</h3>
+          <p>Solución innovadora para energías limpias.</p>
+        </div>
+        <div class="proyecto-card">
+          <h3>Proyecto 2</h3>
+          <p>Plataforma digital para comunidades sostenibles.</p>
+        </div>
+        <div class="proyecto-card">
+          <h3>Proyecto 3</h3>
+          <p>Tecnología aplicada a la educación inclusiva.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPO -->
+  <section id="equipo" class="equipo">
+    <div class="container">
+      <h2 class="section-title">Nuestro Equipo</h2>
+      <div class="equipo-grid">
+        <div class="equipo-card">
+          <img src="assets/img/equipo1.jpg" alt="Miembro 1">
+          <h3>Usr1</h3>
+          <p>Director General</p>
+        </div>
+        <div class="equipo-card">
+          <img src="assets/img/equipo2.jpg" alt="Miembro 2">
+          <h3>Usr2</h3>
+          <p>Jefe de Innovación</p>
+        </div>
+        <div class="equipo-card">
+          <img src="assets/img/equipo3.jpg" alt="Miembro 3">
+          <h3>Usr3</h3>
+          <p>Coordinador de Proyectos</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contacto">
+    <div class="container">
+      <h2 class="section-title">Contáctanos</h2>
+      <p class="section-text">¿Tienes un proyecto en mente? Escríbenos y trabajemos juntos.</p>
+      <form class="contact-form">
+        <input type="text" placeholder="Nombre" required>
+        <input type="email" placeholder="Correo" required>
+        <textarea placeholder="Mensaje" required></textarea>
+        <button type="submit" class="btn-primary">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; 2025 Empresa. Todos los derechos reservados.</p>
+      <nav class="footer-nav">
+        <a href="#inicio" data-target="inicio">Inicio</a>
+        <a href="#vision" data-target="vision">Visión</a>
+        <a href="#mision" data-target="mision">Misión</a>
+        <a href="#proyectos" data-target="proyectos">Proyectos</a>
+        <a href="#equipo" data-target="equipo">Equipo</a>
+        <a href="#contacto" data-target="contacto">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
