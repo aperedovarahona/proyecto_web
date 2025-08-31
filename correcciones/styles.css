@@ -313,6 +313,37 @@ equipo {
 }
 
 /* ==============================
+    UBICACIÓN
+============================== */
+.ubicacion {
+    padding: 4rem 0;
+    background: #fff;
+}
+
+.mapa-container {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.direccion {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--color-gray);
+    border-radius: 10px;
+}
+
+.direccion h3 {
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.direccion p {
+    margin-bottom: 0.5rem;
+}
+
+/* ==============================
    FOOTER
 ============================== */
 .footer {
