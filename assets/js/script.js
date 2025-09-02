@@ -2,22 +2,33 @@
 // Esto es lo que hace que al hacer click en cualquier botón o enlace,
 // la página se desplace suavemente hasta la sección correspondiente.
 document.querySelectorAll('[data-target]').forEach(button => {
-  button.addEventListener('click', (e) => {
-    e.preventDefault(); // Evitamos que el botón haga su acción por defecto (como saltar de golpe)
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
 
-    const targetId = button.getAttribute('data-target'); // Obtenemos el id de la sección a la que queremos ir
-    const targetSection = document.getElementById(targetId); // Buscamos esa sección en el DOM
+        const targetId = button.getAttribute('data-target');
+        const targetSection = document.getElementById(targetId);
 
-    if (targetSection) { // Si existe la sección, hacemos el scroll suave
-      targetSection.scrollIntoView({ behavior: 'smooth' });
-    }
+        if (targetSection) {
+            // Método moderno con scrollIntoView y options
+            const header = document.getElementById('header');
+            const headerHeight = header.offsetHeight;
+            
+            // Calcular posición exacta
+            const elementPosition = targetSection.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
 
-    // Y aquí un detalle importante: si el menú móvil está abierto, lo cerramos
-    const mobileMenu = document.getElementById('mobile-menu');
-    if (mobileMenu.classList.contains('open')) {
-      toggleMobileMenu(); // Llamamos a la función que cierra el menú
-    }
-  });
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+
+        // Cerrar menú móvil si está abierto
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenu.classList.contains('open')) {
+            toggleMobileMenu();
+        }
+    });
 });
 
 // ===== MENU MÓVIL =====
