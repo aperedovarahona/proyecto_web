@@ -57,15 +57,18 @@
 
   <!-- HERO -->
   <section id="inicio" class="hero">
-    <div class="container hero-container">
-      <h1 class="hero-title">Innovación que Transforma</h1>
-      <p class="hero-subtitle">Construimos el futuro con soluciones creativas y sostenibles.</p>
-      <div class="hero-buttons">
-        <button data-target="proyectos" class="btn-primary">Ver Proyectos</button>
-        <button data-target="contacto" class="btn-ghost">Contáctanos</button>
+    <div class="hero-overlay">
+      <div class="container hero-container">
+        <h1 class="hero-title">Innovación que Transforma</h1>
+        <p class="hero-subtitle">Construimos el futuro con soluciones creativas y sostenibles.</p>
+        <div class="hero-buttons">
+          <button data-target="proyectos" class="btn-primary">Ver Proyectos</button>
+          <button data-target="contacto" class="btn-ghost">Contáctanos</button>
+        </div>
       </div>
     </div>
   </section>
+
 
   <!-- VISIÓN -->
   <section id="vision" class="vision">
@@ -199,59 +202,59 @@
 
   <!-- EQUIPO -->
   <!-- EQUIPO -->
-<section id="equipo" class="equipo">
-  <div class="container">
-    <h2 class="section-title">Nuestro Equipo</h2>
+  <section id="equipo" class="equipo">
+    <div class="container">
+      <h2 class="section-title">Nuestro Equipo</h2>
 
-    <!-- Contenedor principal de tarjetas -->
-    <div class="equipo-grid">
+      <!-- Contenedor principal de tarjetas -->
+      <div class="equipo-grid">
 
-      <!-- Tarjeta individual -->
-      <div class="equipo-card">
-        <img src="assets/img/use1.jpg" alt="Miembro 1">
-        <h3>Usr1</h3>
-        <p>Director General</p>
-        <div class="equipo-redes">
-          <a href="https://www.linkedin.com/in/usuario1" target="_blank">
-            <img src="assets/img/in.png" alt="LinkedIn">
-          </a>
-          <a href="mailto:usuario1@gmail.com">
-            <img src="assets/img/gmail.png" alt="Gmail">
-          </a>
+        <!-- Tarjeta individual -->
+        <div class="equipo-card">
+          <img src="assets/img/use1.jpg" alt="Miembro 1">
+          <h3>Usr1</h3>
+          <p>Director General</p>
+          <div class="equipo-redes">
+            <a href="https://www.linkedin.com/in/usuario1" target="_blank">
+              <img src="assets/img/in.png" alt="LinkedIn">
+            </a>
+            <a href="mailto:usuario1@gmail.com">
+              <img src="assets/img/gmail.png" alt="Gmail">
+            </a>
+          </div>
         </div>
-      </div>
 
-      <div class="equipo-card">
-        <img src="assets/img/use2.jpg" alt="Miembro 2">
-        <h3>Usr2</h3>
-        <p>Jefe de Innovación</p>
-        <div class="equipo-redes">
-          <a href="https://www.linkedin.com/in/usuario2" target="_blank">
-            <img src="assets/img/in.png" alt="LinkedIn">
-          </a>
-          <a href="mailto:usuario2@gmail.com">
-            <img src="assets/img/gmail.png" alt="Gmail">
-          </a>
+        <div class="equipo-card">
+          <img src="assets/img/use2.jpg" alt="Miembro 2">
+          <h3>Usr2</h3>
+          <p>Jefe de Innovación</p>
+          <div class="equipo-redes">
+            <a href="https://www.linkedin.com/in/usuario2" target="_blank">
+              <img src="assets/img/in.png" alt="LinkedIn">
+            </a>
+            <a href="mailto:usuario2@gmail.com">
+              <img src="assets/img/gmail.png" alt="Gmail">
+            </a>
+          </div>
         </div>
-      </div>
 
-      <div class="equipo-card">
-        <img src="assets/img/use3.jpg" alt="Miembro 3">
-        <h3>Usr3</h3>
-        <p>Coordinador de Proyectos</p>
-        <div class="equipo-redes">
-          <a href="https://www.linkedin.com/in/usuario3" target="_blank">
-            <img src="assets/img/in.png" alt="LinkedIn">
-          </a>
-          <a href="mailto:usuario3@gmail.com">
-            <img src="assets/img/gmail.png" alt="Gmail">
-          </a>
+        <div class="equipo-card">
+          <img src="assets/img/use3.jpg" alt="Miembro 3">
+          <h3>Usr3</h3>
+          <p>Coordinador de Proyectos</p>
+          <div class="equipo-redes">
+            <a href="https://www.linkedin.com/in/usuario3" target="_blank">
+              <img src="assets/img/in.png" alt="LinkedIn">
+            </a>
+            <a href="mailto:usuario3@gmail.com">
+              <img src="assets/img/gmail.png" alt="Gmail">
+            </a>
+          </div>
         </div>
-      </div>
 
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
 
@@ -260,26 +263,53 @@
 
   <!-- CONTACTO -->
   <section id="contacto" class="contacto">
-    <div class="container">
-      <h2 class="section-title">Contáctanos</h2>
-      <p class="section-text">¿Tienes un proyecto en mente? Escríbenos y trabajemos juntos.</p>
-      <form class="contact-form">
-        <input type="text" placeholder="Nombre" required>
-        <input type="email" placeholder="Correo" required>
-        <textarea placeholder="Mensaje" required></textarea>
-        <button type="submit" class="btn-primary">Enviar</button>
-      </form>
-    </div>
+    <div class="container contacto-flex">
 
-    <!-- Botón WhatsApp -->
-    <div class="whatsapp-container">
-      <a href="https://wa.me/71418511?text=Hola%2C%20quiero%20informaci%C3%B3n" target="_blank" class="btn-whatsapp">
-        <img src="assets/img/whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
-        Contactar por WhatsApp
-      </a>
-    </div>
+      <!-- Columna izquierda: Formulario -->
+      <div class="contacto-formulario">
+        <h2 class="section-title">Contáctanos</h2>
+        <p class="section-text">¿Tienes un proyecto en mente? Escríbenos y trabajemos juntos.</p>
+        <form class="contact-form">
+          <input type="text" placeholder="Nombre" required>
+          <input type="email" placeholder="Correo" required>
+          <textarea placeholder="Mensaje" required></textarea>
+          <button type="submit" class="btn-primary">Enviar</button>
+        </form>
+      </div>
+
+      <!-- Columna derecha: WhatsApp + Redes -->
+      <div class="contacto-whatsapp">
+        <h2 class="section-title">Más información</h2>
+        <p class="section-text">Escríbenos directamente por WhatsApp.</p>
+
+        <!-- Botón WhatsApp -->
+        <a href="https://wa.me/71418511?text=Hola%2C%20quiero%20informaci%C3%B3n" target="_blank" class="btn-whatsapp">
+          <img src="assets/img/whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
+          Contactar por WhatsApp
+        </a>
+
+        <!-- Redes sociales -->
+        <div class="social-links">
+          <h3>Síguenos en</h3>
+          <div class="social-buttons">
+            <a href="#" target="_blank" class="btn-social">
+              <img src="assets/img/facebook.png" alt="Facebook">
+            </a>
+            <a href="#" target="_blank" class="btn-social">
+              <img src="assets/img/instagram.png" alt="Instagram">
+            </a>
+            <a href="#" target="_blank" class="btn-social">
+              <img src="assets/img/linkedin.png" alt="LinkedIn">
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
+
+
+
 
   <!-- FOOTER -->
   <footer class="footer">

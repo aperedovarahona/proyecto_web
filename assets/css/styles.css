@@ -127,30 +127,73 @@ a, button {
   display: none;
 }
 
-/* ===== HERO ===== */
+/* ===== HERO con imagen de fondo parallax y filtro celeste ===== */
+/* ===== HERO completo ===== */
 .hero {
-  background: linear-gradient(135deg, #cbe9ff, #a8dfff);
-  color: #222;
+  position: relative;
+  background-image: url("../img/banner.jpg"); /* imagen de fondo */
+  background-color: rgba(4, 42, 70, 0.35); /* filtro celeste semi-transparente */
+  background-blend-mode: overlay; /* combina el color con la imagen */
+  background-attachment: fixed; /* efecto parallax */
+  background-size: cover;
+  background-position: center;
+  color: #fff; /* texto blanco por defecto */
   text-align: center;
   padding: 100px 20px;
 }
 
+/* capa semitransparente para resaltar el contenido */
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.25); /* sombra suave sobre la imagen */
+  padding: 100px 20px;
+  border-radius: 12px;
+  position: relative;
+  z-index: 1; /* texto y botones sobre la overlay */
+}
+
+/* estilos del título y subtítulo */
 .hero-title {
   font-size: 42px;
   margin-bottom: 15px;
+  color: #fff; /* título completamente blanco */
 }
 
 .hero-subtitle {
   font-size: 20px;
   opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #fff; /* subtítulo blanco */
 }
 
+/* botones dentro del Hero, centrados y con mismo estilo */
 .hero-buttons {
-  margin-top: 30px;
+  margin-top: 50px; /* espacio desde el subtítulo */
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 20px; /* espacio entre los botones */
 }
+
+.hero-buttons .btn-primary,
+.hero-buttons .btn-ghost {
+  background-color: rgba(173, 216, 230, 0.3); /* celeste suave semi-transparente */
+  color: #fff; /* texto blanco */
+  border: 2px solid #fff; /* borde blanco como Contactanos */
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* efecto hover */
+.hero-buttons .btn-primary:hover,
+.hero-buttons .btn-ghost:hover {
+  background-color: rgba(173, 216, 230, 0.5); /* celeste un poco más intenso al pasar el mouse */
+}
+
+
+
 
 /* ===== SECCIONES ===== */
 .section-title {
@@ -341,6 +384,21 @@ a, button {
 
 
 /* Contacto */
+.contacto-flex {
+  display: flex;
+  flex-wrap: wrap; /* responsive */
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.contacto-formulario,
+.contacto-whatsapp {
+  flex: 1 1 300px; /* mínimo 300px, se ajustan al espacio */
+  max-width: 500px;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -362,33 +420,73 @@ a, button {
   align-self: center;
 }
 
-/* Botón WhatsApp */
-.whatsapp-container {
+/* Bloque WhatsApp */
+.contacto-whatsapp {
   text-align: center;
-  margin-top: 20px;
 }
 
 .btn-whatsapp {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: #25D366;
+  background: #88c9f9; /* celeste pastel */
   color: #fff;
   padding: 10px 20px;
   border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
   transition: 0.3s ease;
+  margin-top: 5px;
+  margin-bottom: 20px;
 }
 
 .btn-whatsapp:hover {
-  background: #1ebe57;
+  background: #6bb6f0;
 }
 
 .whatsapp-icon {
   width: 24px;
   height: 24px;
 }
+
+/* Redes sociales */
+.social-links h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #1f2a38;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Botones sociales redondos */
+.btn-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: #88c9f9; /* mismo color que WhatsApp */
+  border-radius: 50%; /* círculo perfecto */
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-social:hover {
+  background: #6bb6f0;
+  transform: scale(1.1);
+}
+
+.btn-social img {
+  width: 22px;
+  height: 22px;
+}
+
+
+
+
 
 /* Footer */
 .footer {
