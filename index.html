@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Empresa - Innovación que Transforma</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="assets\css\styles.css">
 </head>
+
 <body>
   <!-- HEADER -->
   <header id="header" class="site-header">
@@ -31,10 +35,10 @@
       <!-- Mobile Menu Button -->
       <button id="mobile-menu-btn" class="nav-toggle">
         <svg id="menu-icon" class="icon" viewBox="0 0 24 24">
-          <path d="M4 6h16M4 12h16M4 18h16"/>
+          <path d="M4 6h16M4 12h16M4 18h16" />
         </svg>
         <svg id="close-icon" class="icon hidden" viewBox="0 0 24 24">
-          <path d="M6 18L18 6M6 6l12 12"/>
+          <path d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
     </div>
@@ -67,7 +71,8 @@
   <section id="vision" class="vision">
     <div class="container">
       <h2 class="section-title">Nuestra Visión</h2>
-      <p class="section-text">Ser líderes en innovación tecnológica y desarrollo sostenible, generando un impacto positivo en la sociedad y el medio ambiente.</p>
+      <p class="section-text">Ser líderes en innovación tecnológica y desarrollo sostenible, generando un impacto
+        positivo en la sociedad y el medio ambiente.</p>
     </div>
   </section>
 
@@ -75,7 +80,8 @@
   <section id="mision" class="mision">
     <div class="container">
       <h2 class="section-title">Nuestra Misión</h2>
-      <p class="section-text">Proporcionar soluciones creativas que mejoren la calidad de vida de las personas, combinando tecnología, sostenibilidad y compromiso social.</p>
+      <p class="section-text">Proporcionar soluciones creativas que mejoren la calidad de vida de las personas,
+        combinando tecnología, sostenibilidad y compromiso social.</p>
     </div>
   </section>
 
@@ -83,46 +89,174 @@
   <section id="proyectos" class="proyectos">
     <div class="container">
       <h2 class="section-title">Proyectos Destacados</h2>
-      <div class="proyectos-grid">
-        <div class="proyecto-card">
-          <h3>Proyecto 1</h3>
-          <p>Solución innovadora para energías limpias.</p>
+
+      <div class="carousel">
+        <button class="carousel-btn prev">&#10094;</button>
+
+        <div class="carousel-window">
+          <div class="carousel-track">
+            <div class="proyecto-card" data-target="detalle1">
+              <h3>Proyecto 1</h3>
+              <img src="assets/img/proyecto1.jpg" alt="Proyecto 1">
+              <p>Solución innovadora para energías limpias.</p>
+            </div>
+            <div class="proyecto-card" data-target="detalle2">
+              <h3>Proyecto 2</h3>
+              <img src="assets/img/proyecto2.jpg" alt="Proyecto 2">
+              <p>Plataforma digital para comunidades sostenibles.</p>
+            </div>
+            <div class="proyecto-card" data-target="detalle3">
+              <h3>Proyecto 3</h3>
+              <img src="assets/img/proyecto3.jpg" alt="Proyecto 3">
+              <p>Tecnología aplicada a la educación inclusiva.</p>
+            </div>
+            <div class="proyecto-card" data-target="detalle4">
+              <h3>Proyecto 4</h3>
+              <img src="assets/img/proyecto4.jpg" alt="Proyecto 4">
+              <p>App para mejorar la movilidad urbana.</p>
+            </div>
+            <div class="proyecto-card" data-target="detalle5">
+              <h3>Proyecto 5</h3>
+              <img src="assets/img/proyecto5.jpg" alt="Proyecto 5">
+              <p>Optimización de recursos hídricos.</p>
+            </div>
+          </div>
         </div>
-        <div class="proyecto-card">
-          <h3>Proyecto 2</h3>
-          <p>Plataforma digital para comunidades sostenibles.</p>
-        </div>
-        <div class="proyecto-card">
-          <h3>Proyecto 3</h3>
-          <p>Tecnología aplicada a la educación inclusiva.</p>
-        </div>
+
+
+        <button class="carousel-btn next">&#10095;</button>
       </div>
     </div>
   </section>
 
-  <!-- EQUIPO -->
-  <section id="equipo" class="equipo">
-    <div class="container">
-      <h2 class="section-title">Nuestro Equipo</h2>
-      <div class="equipo-grid">
-        <div class="equipo-card">
-          <img src="assets/img/equipo1.jpg" alt="Miembro 1">
-          <h3>Usr1</h3>
-          <p>Director General</p>
-        </div>
-        <div class="equipo-card">
-          <img src="assets/img/equipo2.jpg" alt="Miembro 2">
-          <h3>Usr2</h3>
-          <p>Jefe de Innovación</p>
-        </div>
-        <div class="equipo-card">
-          <img src="assets/img/equipo3.jpg" alt="Miembro 3">
-          <h3>Usr3</h3>
-          <p>Coordinador de Proyectos</p>
-        </div>
+  <!-- DETALLES DE PROYECTOS -->
+
+  <section id="detalle1" class="detalle-proyecto">
+    <div class="container detalle-flex">
+      <div class="detalle-texto">
+        <h3>Proyecto 1: Energías Limpias</h3>
+        <p>Descripción completa del Proyecto 1, incluyendo objetivos, resultados esperados y equipo involucrado.</p>
+      </div>
+      <div class="detalle-imagen">
+        <img src="assets/img/proyecto1.jpg" alt="Proyecto 1">
       </div>
     </div>
   </section>
+
+  <section id="detalle2" class="detalle-proyecto">
+    <div class="container detalle-flex">
+      <div class="detalle-texto">
+        <h3>Proyecto 2: Comunidades Sostenibles</h3>
+        <p>Descripción completa del Proyecto 2, incluyendo objetivos, metodología y beneficios para la comunidad.</p>
+      </div>
+      <div class="detalle-imagen">
+        <img src="assets/img/proyecto2.jpg" alt="Proyecto 2">
+      </div>
+    </div>
+  </section>
+
+  <section id="detalle3" class="detalle-proyecto">
+    <div class="container detalle-flex">
+      <div class="detalle-texto">
+        <h3>Proyecto 3: Educación Inclusiva</h3>
+        <p>Descripción completa del Proyecto 3, incluyendo estrategias de implementación, recursos y resultados
+          esperados.</p>
+      </div>
+      <div class="detalle-imagen">
+        <img src="assets/img/proyecto3.jpg" alt="Proyecto 3">
+      </div>
+    </div>
+  </section>
+
+  <section id="detalle4" class="detalle-proyecto">
+    <div class="container detalle-flex">
+      <div class="detalle-texto">
+        <h3>Proyecto 4: Movilidad Urbana</h3>
+        <p>Descripción completa del Proyecto 4, con análisis de rutas, impacto ambiental y soluciones tecnológicas
+          aplicadas.</p>
+      </div>
+      <div class="detalle-imagen">
+        <img src="assets/img/proyecto4.jpg" alt="Proyecto 4">
+      </div>
+    </div>
+  </section>
+
+  <section id="detalle5" class="detalle-proyecto">
+    <div class="container detalle-flex">
+      <div class="detalle-texto">
+        <h3>Proyecto 5: Recursos Hídricos</h3>
+        <p>Descripción completa del Proyecto 5, mostrando estrategias de optimización, conservación y beneficios a largo
+          plazo.</p>
+      </div>
+      <div class="detalle-imagen">
+        <img src="assets/img/proyecto5.jpg" alt="Proyecto 5">
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- EQUIPO -->
+  <!-- EQUIPO -->
+<section id="equipo" class="equipo">
+  <div class="container">
+    <h2 class="section-title">Nuestro Equipo</h2>
+
+    <!-- Contenedor principal de tarjetas -->
+    <div class="equipo-grid">
+
+      <!-- Tarjeta individual -->
+      <div class="equipo-card">
+        <img src="assets/img/use1.jpg" alt="Miembro 1">
+        <h3>Usr1</h3>
+        <p>Director General</p>
+        <div class="equipo-redes">
+          <a href="https://www.linkedin.com/in/usuario1" target="_blank">
+            <img src="assets/img/in.png" alt="LinkedIn">
+          </a>
+          <a href="mailto:usuario1@gmail.com">
+            <img src="assets/img/gmail.png" alt="Gmail">
+          </a>
+        </div>
+      </div>
+
+      <div class="equipo-card">
+        <img src="assets/img/use2.jpg" alt="Miembro 2">
+        <h3>Usr2</h3>
+        <p>Jefe de Innovación</p>
+        <div class="equipo-redes">
+          <a href="https://www.linkedin.com/in/usuario2" target="_blank">
+            <img src="assets/img/in.png" alt="LinkedIn">
+          </a>
+          <a href="mailto:usuario2@gmail.com">
+            <img src="assets/img/gmail.png" alt="Gmail">
+          </a>
+        </div>
+      </div>
+
+      <div class="equipo-card">
+        <img src="assets/img/use3.jpg" alt="Miembro 3">
+        <h3>Usr3</h3>
+        <p>Coordinador de Proyectos</p>
+        <div class="equipo-redes">
+          <a href="https://www.linkedin.com/in/usuario3" target="_blank">
+            <img src="assets/img/in.png" alt="LinkedIn">
+          </a>
+          <a href="mailto:usuario3@gmail.com">
+            <img src="assets/img/gmail.png" alt="Gmail">
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
 
   <!-- CONTACTO -->
   <section id="contacto" class="contacto">
@@ -135,6 +269,15 @@
         <textarea placeholder="Mensaje" required></textarea>
         <button type="submit" class="btn-primary">Enviar</button>
       </form>
+    </div>
+
+    <!-- Botón WhatsApp -->
+    <div class="whatsapp-container">
+      <a href="https://wa.me/71418511?text=Hola%2C%20quiero%20informaci%C3%B3n" target="_blank" class="btn-whatsapp">
+        <img src="assets/img/whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
+        Contactar por WhatsApp
+      </a>
+    </div>
     </div>
   </section>
 
@@ -155,4 +298,5 @@
 
   <script src="assets\js\script.js"></script>
 </body>
+
 </html>

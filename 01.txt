@@ -1,0 +1,11 @@
+para que puedas hacer cualquier cambio al repo de git 
+
+
+ctrl + s ------> guardas tus cambios de forma local
+
+Luego en la terminal del visual
+
+git add .
+git commit -m "cambios o cosas que hiciste"    -------> no te olvides de poner las comillas ("")
+git push --set-upstream origin "rama en la q haces los cambios"
+

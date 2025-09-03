@@ -35,3 +35,73 @@ function toggleMobileMenu() {
   menuIcon.classList.toggle('hidden'); // Mostramos u ocultamos el icono de menú
   closeIcon.classList.toggle('hidden'); // Mostramos u ocultamos el icono de cerrar
 }
+
+// ===== CARRUSEL PROYECTOS =====
+const track = document.querySelector(".carousel-track");
+const prevBtn = document.querySelector(".carousel-btn.prev");
+const nextBtn = document.querySelector(".carousel-btn.next");
+const slides = Array.from(track.children);
+let currentIndex = 0;
+
+// Función para mover el carrusel
+function updateCarousel() {
+  const cardWidth = slides[0].getBoundingClientRect().width + 20;
+  track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+}
+
+function nextSlide() {
+  if (currentIndex < slides.length - 3) {
+    currentIndex++;
+  } else {
+    currentIndex = 0;
+  }
+  updateCarousel();
+}
+
+function prevSlide() {
+  if (currentIndex > 0) {
+    currentIndex--;
+  } else {
+    currentIndex = slides.length - 3;
+  }
+  updateCarousel();
+}
+
+nextBtn.addEventListener("click", () => {
+  nextSlide();
+  resetAutoplay();
+});
+prevBtn.addEventListener("click", () => {
+  prevSlide();
+  resetAutoplay();
+});
+
+// Autoplay
+let autoplayInterval;
+function startAutoplay() {
+  autoplayInterval = setInterval(nextSlide, 3000);
+}
+function resetAutoplay() {
+  clearInterval(autoplayInterval);
+  startAutoplay();
+}
+startAutoplay();
+
+// Ajuste al redimensionar ventana
+window.addEventListener("resize", updateCarousel);
+
+// ===== SCROLL SUAVE A DETALLES =====
+const proyectoCards = document.querySelectorAll(".proyecto-card");
+proyectoCards.forEach(card => {
+  card.addEventListener("click", () => {
+    const targetId = card.getAttribute("data-target");
+    const targetSection = document.getElementById(targetId);
+    if (targetSection) {
+      window.scrollTo({
+        top: targetSection.offsetTop - 20,
+        behavior: "smooth"
+      });
+    }
+  });
+});
+
