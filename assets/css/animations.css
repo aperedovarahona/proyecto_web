@@ -1,222 +1,240 @@
-/* ============================
-   TRANSICIONES GLOBALES
-============================ */
+/* --- TRANSICIONES GLOBALES --- */
 * {
-    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease,
+  border-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* ============================
-   ANIMACIONES DE HOVER
-============================ */
+/* --- ANIMACIONES DE HOVER --- */
 /* Botones */
-.btn-primary {
-    background: var(--color-primary);
-    color: #fff;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background 0.3s ease;
+.btn-primary, .btn-ghost {
+  position: relative;
+  overflow: hidden;
 }
-
 
 .btn-primary::before, .btn-ghost::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s ease;
-    z-index: -1;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+  z-index: -1;
 }
 
 .btn-primary:hover::before, .btn-ghost:hover::before {
-    left: 100%;
+  left: 100%;
 }
 
-/* Tarjetas de proyecto */
-.proyecto-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.proyecto-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Tarjetas de equipo */
-.equipo-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.equipo-card:hover {
-    transform: translateY(-5px) scale(1.03);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-}
-
-.equipo-card img {
-    transition: transform 0.5s ease;
-}
-
-.equipo-card:hover img {
-    transform: scale(1.1);
-}
-
-/* Formulario de contacto */
-.contact-form input, 
-.contact-form textarea {
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contact-form input:focus, 
-.contact-form textarea:focus {
-    border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.1);
-    outline: none;
-}
-
-/* ============================
-   ANIMACIONES DE SCROLL (AOS)
-============================ */
+/* --- ANIMACIONES DE SCROLL (AOS) --- */
+/* SOLUCIÓN: Eliminar la opacidad 0 inicial para que el contenido sea visible */
 [data-aos] {
-    opacity: 0;
-    transition: opacity 0.6s ease, transform 0.6s ease;
+  /* opacity: 0;  <- ESTA LÍNEA CAUSABA EL PROBLEMA */
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 [data-aos].aos-animate {
-    opacity: 1;
+  opacity: 1;
 }
 
 [data-aos="fade-up"] {
-    transform: translateY(30px);
+  transform: translateY(30px);
 }
 
 [data-aos="fade-up"].aos-animate {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 [data-aos="fade-down"] {
-    transform: translateY(-30px);
+  transform: translateY(-30px);
 }
 
 [data-aos="fade-down"].aos-animate {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 [data-aos="fade-left"] {
-    transform: translateX(-30px);
+  transform: translateX(30px);
 }
 
 [data-aos="fade-left"].aos-animate {
-    transform: translateX(0);
+  transform: translateX(0);
 }
 
 [data-aos="fade-right"] {
-    transform: translateX(30px);
+  transform: translateX(-30px);
 }
 
 [data-aos="fade-right"].aos-animate {
-    transform: translateX(0);
+  transform: translateX(0);
 }
 
 [data-aos="zoom-in"] {
-    transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 [data-aos="zoom-in"].aos-animate {
-    transform: scale(1);
+  transform: scale(1);
 }
 
-[data-aos="flip-left"] {
-    transform: perspective(1000px) rotateY(-90deg);
+[data-aos="zoom-out"] {
+  transform: scale(1.1);
 }
 
-[data-aos="flip-left"].aos-animate {
-    transform: perspective(1000px) rotateY(0);
+[data-aos="zoom-out"].aos-animate {
+  transform: scale(1);
 }
 
-/* ============================
-   ANIMACIONES DE NAVEGACIÓN
-============================ */
-/* Efecto de subrayado en navegación */
-.nav-desktop button {
-    position: relative;
+/* --- ANIMACIONES DE SECCIONES --- */
+/* Animación de entrada para secciones */
+.section-animate {
+  /* SOLUCIÓN: Eliminar opacidad 0 inicial */
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.nav-desktop button::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--color-primary);
-    transition: width 0.3s ease;
+.section-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.nav-desktop button:hover::after {
-    width: 100%;
+/* Animación para el header al hacer scroll */
+.site-header.scrolled {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
 }
 
-/* ============================
-   ANIMACIÓN PARA EL HERO
-============================ */
-.hero-title {
-    animation: fadeInDown 1s ease forwards;
+/* Animación para el logo */
+.logo-box {
+  transition: transform 0.5s ease;
 }
 
-.hero-subtitle {
-    animation: fadeInUp 1s ease 0.3s forwards;
-    opacity: 0;
+.logo-box:hover {
+  transform: rotate(10deg);
 }
 
-.hero-buttons {
-    animation: fadeInUp 1s ease 0.6s forwards;
-    opacity: 0;
+/* Animación para las tarjetas de equipo */
+.equipo-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.equipo-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Animación para las imágenes de equipo */
+.equipo-card img {
+  transition: transform 0.5s ease;
 }
 
-/* ============================
-   EFECTO DE MAQUINA DE ESCRIBIR 
-============================ */
-.typewriter {
-    overflow: hidden;
-    border-right: 0.15em solid var(--color-primary);
-    white-space: nowrap;
-    margin: 0 auto;
-    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+.equipo-card:hover img {
+  transform: scale(1.1);
 }
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+/* Animación para el formulario de contacto */
+.contact-form input,
+.contact-form textarea {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: var(--color-primary) }
-}   
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.1);
+}
+
+/* Animación para botones sociales */
+.btn-social {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-social:hover {
+  transform: scale(1.1);
+}
+
+/* Animación para el botón de WhatsApp */
+.btn-whatsapp {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-3px);
+}
+
+/* Animación para el carrusel de proyectos */
+.carousel-track {
+  transition: transform 0.5s ease-in-out;
+}
+
+.proyecto-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Animación para el mapa */
+.mapa-container iframe {
+  transition: transform 0.5s ease;
+}
+
+.mapa-container:hover iframe {
+  transform: scale(1.02);
+}
+
+/* Animación para el botón de menú móvil */
+.nav-toggle {
+  transition: transform 0.3s ease;
+}
+
+.nav-toggle.active {
+  transform: rotate(90deg);
+}
+
+/* Animación para el menú móvil */
+.nav-mobile {
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.nav-mobile.active {
+  max-height: 500px;
+  opacity: 1;
+}
+
+/* Animación para elementos del footer */
+.footer-nav a {
+  position: relative;
+}
+
+.footer-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transition: width 0.3s ease;
+}
+
+.footer-nav a:hover::after {
+  width: 100%;
+}
+
+/* Animación de carga para imágenes */
+img {
+  /* SOLUCIÓN: Eliminar opacidad 0 inicial */
+  transition: opacity 0.5s ease;
+}
+
+img.loaded {
+  opacity: 1;
+}

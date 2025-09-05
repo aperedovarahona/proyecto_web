@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +8,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/navigation.css">
 </head>
+
 <body>
   <!-- HEADER -->
   <header id="header" class="site-header">
     <div class="container header-container">
       <!-- Logo -->
       <div class="logo">
-        <div class="logo-box">E</div>
+        <div class="logo-box">Ale</div>
         <span class="logo-text">Empresa</span>
       </div>
 
       <!-- Desktop Navigation -->
       <nav class="nav-desktop">
         <button data-target="inicio">Inicio</button>
-        <button data-target="vision">Visión</button>
-        <button data-target="mision">Misión</button>
+        <button data-target="vision">Vision</button>
+        <button data-target="mision">Mision</button>
         <button data-target="proyectos">Proyectos</button>
         <button data-target="equipo">Equipo</button>
         <button data-target="contacto">Contacto</button>
@@ -32,10 +35,10 @@
       <!-- Mobile Menu Button -->
       <button id="mobile-menu-btn" class="nav-toggle">
         <svg id="menu-icon" class="icon" viewBox="0 0 24 24">
-          <path d="M4 6h16M4 12h16M4 18h16"/>
+          <path d="M4 6h16M4 12h16M4 18h16" />
         </svg>
         <svg id="close-icon" class="icon hidden" viewBox="0 0 24 24">
-          <path d="M6 18L18 6M6 6l12 12"/>
+          <path d="M6 18L18 6M6 61L2 12" />
         </svg>
       </button>
     </div>
@@ -43,152 +46,269 @@
     <!-- Mobile Navigation -->
     <nav id="mobile-menu" class="nav-mobile">
       <button data-target="inicio">Inicio</button>
-      <button data-target="vision">Visión</button>
-      <button data-target="mision">Misión</button>
+      <button data-target="vision">Vision</button>
+      <button data-target="mision">Mision</button>
       <button data-target="proyectos">Proyectos</button>
       <button data-target="equipo">Equipo</button>
       <button data-target="contacto">Contacto</button>
       <button data-target="ubicacion">Ubicación</button>
-
     </nav>
   </header>
 
   <!-- HERO -->
-  <section id="inicio" class="hero" data-aos="fade-down" data-aos-duration="1000">
-    <div class="container hero-container">
-        <h1 class="hero-title" data-aos="fade-right" data-aos-delay="300">Innovación que Transforma</h1>
-        <p class="hero-subtitle" data-aos="fade-left" data-aos-delay="500">Construimos el futuro con soluciones creativas y sostenibles.</p>
-        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="700">
-            <button data-target="proyectos" class="btn-primary">Ver Proyectos</button>
-            <button data-target="contacto" class="btn-ghost">Contactanos</button>
+  <section id="inicio" class="hero">
+    <div class="hero-overlay">
+      <div class="container hero-container">
+        <h1 class="hero-title">Innovación que Transforma</h1>
+        <p class="hero-subtitle">Construimos el futuro con soluciones creativas y sostenibles.</p>
+        <div class="hero-buttons">
+          <button data-target="proyectos" class="btn-primary">Ver Proyectos</button>
+          <button data-target="contacto" class="btn-ghost">Contactanos</button>
         </div>
+      </div>
     </div>
   </section>
 
-
-  <!-- VISIÓN -->
-  <section id="vision" class="vision" data-aos="fade-up" data-aos-duration="800">
+  <!-- VISION -->
+  <section id="vision" class="vision">
     <div class="container">
-        <h2 class="section-title" data-aos="zoom-in" data-aos-delay="200">Nuestra Visión</h2>
-        <p class="section-text" data-aos="fade-up" data-aos-delay="400">Ser líderes en innovación tecnológica y desarrollo sostenible, generando un impacto positivo en la sociedad y el medio ambiente.</p>
+      <h2 class="section-title">Nuestra Vision</h2>
+      <p class="section-text">Ser líderes en innovación tecnológica y desarrollo sostenible, generando un impacto positivo en la sociedad y el medio ambiente.</p>
     </div>
   </section>
 
-  <!-- MISIÓN -->
-  <section id="mision" class="mision" data-aos="fade-up" data-aos-duration="800">
+  <!-- MISION -->
+  <section id="mision" class="mision">
     <div class="container">
-        <h2 class="section-title" data-aos="zoom-in" data-aos-delay="200">Nuestra Misión</h2>
-        <p class="section-text" data-aos="fade-up" data-aos-delay="400">Proporcionar soluciones creativas que mejoren la calidad de vida de las personas, combinando tecnología, sostenibilidad y compromiso social.</p>
+      <h2 class="section-title">Nuestra Misión</h2>
+      <p class="section-text">Proporcionar soluciones creativas que mejoren la calidad de vida de las personas,
+        combinando tecnología, sostenibilidad y compromiso social.</p>
     </div>
   </section>
 
   <!-- PROYECTOS -->
-  <section id="proyectos" class="proyectos" data-aos="fade-up" data-aos-duration="800">
+  <section id="proyectos" class="proyectos">
     <div class="container">
-        <h2 class="section-title" data-aos="fade-right" data-aos-delay="200">Proyectos Destacados</h2>
-        <div class="proyectos-grid">
-            <div class="proyecto-card" data-aos="flip-left" data-aos-delay="300">
-                <h3>Proyecto 1</h3>
-                <p>Solución innovadora para energías limpias.</p>
+      <h2 class="section-title">Proyectos Destacados</h2>
+      <div class="carousel">
+        <button class="carousel-btn prev">&#10094;</button>
+        <div class="carousel-window">
+          <div class="carousel-track">
+            <div class="proyecto-card" data-target="detalle1">
+              <h3>Proyecto 1</h3>
+              <img src="assets/img/proyecto1.jpg" alt="Proyecto 1">
+              <p>Solución innovadora para energías limpias.</p>
             </div>
-            <div class="proyecto-card" data-aos="flip-left" data-aos-delay="400">
-                <h3>Proyecto 2</h3>
-                <p>Plataforma digital para comunidades sostenibles.</p>
+            <div class="proyecto-card" data-target="detalle2">
+              <h3>Proyecto 2</h3>
+              <img src="assets/img/proyecto2.jpg" alt="Proyecto 2">
+              <p>Plataforma digital para comunidades sostenibles.</p>
             </div>
-            <div class="proyecto-card" data-aos="flip-left" data-aos-delay="500">
-                <h3>Proyecto 3</h3>
-                <p>Tecnología aplicada a la educación inclusiva.</p>
+            <div class="proyecto-card" data-target="detalle3">
+              <h3>Proyecto 3</h3>
+              <img src="assets/img/proyecto3.jpg" alt="Proyecto 3">
+              <p>Tecnología aplicada a la educación inclusiva.</p>
             </div>
+            <div class="proyecto-card" data-target="detalle4">
+              <h3>Proyecto 4</h3>
+              <img src="assets/img/proyecto4.jpg" alt="Proyecto 4">
+              <p>App para mejorar la movilidad urbana.</p>
+            </div>
+            <div class="proyecto-card" data-target="detalle5">
+              <h3>Proyecto 5</h3>
+              <img src="assets/img/proyecto5.jpg" alt="Proyecto 5">
+              <p>Optimización de recursos hídricos.</p>
+            </div>
+          </div>
         </div>
+        <button class="carousel-btn next">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETALLES DE PROYECTOS -->
+  <section id="detalle1" class="detalle-proyecto">
+    <div class="container detalle-flex">
+      <div class="detalle-texto">
+        <h3>Proyecto 1: Energías Limpias</h3>
+        <p>Descripción completa del Proyecto 1, incluyendo objetivos, resultados esperados y equipo involucrado.</p>
+      </div>
+      <div class="detalle-imagen">
+        <img src="assets/img/proyecto1.jpg" alt="Proyecto 1">
+      </div>
+    </div>
+  </section>
+
+  <section id="detalle2" class="detalle-proyecto">
+    <div class="container detalle-flex">
+      <div class="detalle-texto">
+        <h3>Proyecto 2: Comunidades Sostenibles</h3>
+        <p>Descripción completa del Proyecto 2, incluyendo objetivos, metodología y beneficios para la comunidad.</p>
+      </div>
+      <div class="detalle-imagen">
+        <img src="assets/img/proyecto2.jpg" alt="Proyecto 2">
+      </div>
+    </div>
+  </section>
+
+  <section id="detalle3" class="detalle-proyecto">
+    <div class="container detalle-flex">
+      <div class="detalle-texto">
+        <h3>Proyecto 3: Educación Inclusiva</h3>
+        <p>Descripción completa del Proyecto 3, incluyendo estrategias de implementación, recursos y resultados
+          esperados.</p>
+      </div>
+      <div class="detalle-imagen">
+        <img src="assets/img/proyecto3.jpg" alt="Proyecto 3">
+      </div>
+    </div>
+  </section>
+
+  <section id="detalle4" class="detalle-proyecto">
+    <div class="container detalle-flex">
+      <div class="detalle-texto">
+        <h3>Proyecto 4: Movilidad Urbana</h3>
+        <p>Descripción completa del Proyecto 4, con análisis de rutas, impacto ambiental y soluciones tecnológicas
+          aplicadas.</p>
+      </div>
+      <div class="detalle-imagen">
+        <img src="assets/img/proyecto4.jpg" alt="Proyecto 4">
+      </div>
+    </div>
+  </section>
+
+  <section id="detalle5" class="detalle-proyecto">
+    <div class="container detalle-flex">
+      <div class="detalle-texto">
+        <h3>Proyecto 5: Recursos Hídricos</h3>
+        <p>Descripción completa del Proyecto 5, mostrando estrategias de optimización, conservación y beneficios a largo
+          plazo.</p>
+      </div>
+      <div class="detalle-imagen">
+        <img src="assets/img/proyecto5.jpg" alt="Proyecto 5">
+      </div>
     </div>
   </section>
 
   <!-- EQUIPO -->
-    <section id="equipo" class="equipo" data-aos="fade-up" data-aos-duration="800">
+  <section id="equipo" class="equipo">
     <div class="container">
-        <h2 class="section-title" data-aos="fade-right" data-aos-delay="200">Nuestro Equipo</h2>
-        <div class="equipo-grid">
-            <div class="equipo-card" data-aos="zoom-in" data-aos-delay="300">
-                <img src="assets/img/equipol.jpg" alt="Miembro 1">
-                <h3>Usr1</h3>
-                <p>Director General</p>
-            </div>
-            <div class="equipo-card" data-aos="zoom-in" data-aos-delay="350">
-                <img src="assets/img/equipol.jpg" alt="Miembro 2">
-                <h3>Usr2</h3>
-                <p>Jefe de Innovación</p>
-            </div>
-            <div class="equipo-card" data-aos="zoom-in" data-aos-delay="400">
-                <img src="assets/img/equipo3.jpg" alt="Miembro 3">
-                <h3>Usr3</h3>
-                <p>Coordinador de Proyectos 1</p>
-            </div>
-            <div class="equipo-card" data-aos="zoom-in" data-aos-delay="450">
-                <img src="assets/img/equipo4.jpg" alt="Miembro 4">
-                <h3>Usr4</h3>
-                <p>Coordinador de Proyectos 2</p>
-            </div>
-            <div class="equipo-card" data-aos="zoom-in" data-aos-delay="500">
-                <img src="assets/img/equipo5.jpg" alt="Miembro 5">
-                <h3>Usr5</h3>
-                <p>Coordinador de Proyectos 3</p>
-            </div>
-            <div class="equipo-card" data-aos="zoom-in" data-aos-delay="550">
-                <img src="assets/img/equipo6.jpg" alt="Miembro 6">
-                <h3>Usr6</h3>
-                <p>Coordinador de Proyectos 4</p>
-            </div>
-            <div class="equipo-card" data-aos="zoom-in" data-aos-delay="600">
-                <img src="assets/img/equipo7.jpg" alt="Miembro 7">
-                <h3>Usr7</h3>
-                <p>Coordinador de Proyectos 5</p>
-            </div>
+      <h2 class="section-title">Nuestro Equipo</h2>
+
+      <!-- Contenedor principal de tarjetas -->
+      <div class="equipo-grid">
+
+        <!-- Tarjeta individual -->
+        <div class="equipo-card">
+          <img src="assets/img/usel.jpg" alt="Miembro 1">
+          <h3>Usrl</h3>
+          <p>Director General</p>
+          <div class="equipo-redes">
+            <a href="https://www.linkedin.com/in/usuario1" target="_blank">
+              <img src="assets/img/in.png" alt="LinkedIn">
+            </a>
+            <a href="mailto:usuario1@gmail.com">
+              <img src="assets/img/gmail.png" alt="Gmail">
+            </a>
+          </div>
         </div>
+
+        <div class="equipo-card">
+          <img src="assets/img/use2.jpg" alt="Miembro 2">
+          <h3>Usr2</h3>
+          <p>Jefe de Innovación</p>
+          <div class="equipo-redes">
+            <a href="https://www.linkedin.com/in/usuario2" target="_blank">
+              <img src="assets/img/in.png" alt="LinkedIn">
+            </a>
+            <a href="mailto:usuario2@gmail.com">
+              <img src="assets/img/gmail.png" alt="Gmail">
+            </a>
+          </div>
+        </div>
+
+        <div class="equipo-card">
+          <img src="assets/img/use3.jpg" alt="Miembro 3">
+          <h3>Usr3</h3>
+          <p>Coordinador de Proyectos</p>
+          <div class="equipo-redes">
+            <a href="https://www.linkedin.com/in/usuario3" target="_blank">
+              <img src="assets/img/in.png" alt="LinkedIn">
+            </a>
+            <a href="mailto:usuario3@gmail.com">
+              <img src="assets/img/gmail.png" alt="Gmail">
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- UBICACION -->
+  <section id="ubicacion" class="ubicacion">
+    <div class="container">
+      <h2 class="section-title">Nuestra Ubicación</h2>
+      <div class="ubicacion-grid">
+        <div class="mapa-container">
+          <!-- Aquí iría el mapa de Google Maps o similar -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1903.9400951716505!2d-66.16907089444118!3d-17.369497219291137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e3759f07ab6d29%3A0x7ad30e13c3328505!2sCentury%2021%20Master!5e0!3m2!1ses!2sbo!4v1756599033417!5m2!1ses!2sbo" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="direccion">
+          <h3>Nuestra Oficina</h3>
+          <p><span class="icon">📍</span> Dirección: Calle Principal, San José, Costa Rica</p>
+          <p><span class="icon">⏰</span> Horario: Lunes a Viernes, 8:00 AM - 5:00 PM</p>
+          <p><span class="icon">📞</span> Teléfono: +506 2222-2222</p>
+          <p><span class="icon">✉️</span> Email: info@empresa.com</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- CONTACTO -->
-  <section id="contacto" class="contacto" data-aos="fade-up" data-aos-duration="800">
-    <div class="container">
-        <h2 class="section-title" data-aos="fade-right" data-aos-delay="200">Contactanos</h2>
-        <p class="section-text" data-aos="fade-left" data-aos-delay="300">¿Tienes un proyecto en mente? Escribenos y trabajemos juntos.</p>
-        <form class="contact-form" data-aos="zoom-in" data-aos-delay="500">
-            <input type="text" placeholder="Nombre" required>
-            <input type="email" placeholder="Correo" required>
-            <textarea placeholder="Mensaje" required></textarea>
-            <button type="submit" class="btn-primary">Enviar</button>
+  <section id="contacto" class="contacto">
+    <div class="container contacto-flex">
+
+      <!-- Columna izquierda: Formulario -->
+      <div class="contacto-formulario">
+        <h2 class="section-title">Contáctanos</h2>
+        <p class="section-text">¿Tienes un proyecto en mente?
+          Escribenos y trabajemos juntos.</p>
+        <form class="contact-form">
+          <input type="text" placeholder="Nombre" required>
+          <input type="email" placeholder="Correo" required>
+          <textarea placeholder="Mensaje" required></textarea>
+          <button type="submit" class="btn-primary">Enviar</button>
         </form>
-    </div>
-  </section>
+      </div>
 
-  <!-- UBICACIÓN -->
-  <section id="ubicacion" class="ubicacion" data-aos="fade-up" data-aos-duration="800">
-    <div class="container">
-        <h2 class="section-title" data-aos="fade-right" data-aos-delay="200">Nuestra Ubicación</h2>
-        <p class="section-text" data-aos="fade-left" data-aos-delay="300">Visitanos en nuestras oficinas centrales. Estamos aquí para colaborar contigo.</p>
+      <!-- Columna derecha: WhatsApp + Redes -->
+      <div class="contacto-whatsapp">
+        <h2 class="section-title">Más información</h2>
+        <p class="section-text">Escribenos directamente por WhatsApp.</p>
 
-        <div class="ubicacion-grid" data-aos="zoom-in" data-aos-delay="500">
-            <div class="mapa-container">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1903.9400951716505!2d-66.16907089444118!3d-17.369497219291137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e3759f07ab6d29%3A0x7ad30e13c3328505!2sCentury%2021%20Master!5e0!3m2!1ses!2sbo!4v1756599033417!5m2!1ses!2sbo"
-                  width="100%"
-                  height="100%"
-                  style="border:0;"
-                  allowfullscreen="" 
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
+        <!-- Botón WhatsApp -->
+        <a href="https://wa.me/71418511?text=Hola%2C%20quiero%20informaci%C3%B3n" target="_blank" class="btn-whatsapp">
+          <img src="assets/img/whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
+          Contactar por WhatsApp
+        </a>
 
-            <div class="direccion">
-                <h3>Dirección</h3>
-                <p><span class="icon">📍</span> Cochabamba, Bolivia</p>
-                <p><span class="icon">📞</span> +591 1234567</p>
-                <p><span class="icon">✉️</span> info@empresa.com</p>
-                <p><span class="icon">🕒</span> Lunes a Viernes: 9:00 - 18:00</p>
-                <p><span class="icon">🕒</span> Sábados: 9:00 - 13:00</p>
-            </div>
+        <!-- Redes sociales -->
+        <div class="social-links">
+          <h3>Síguenos en</h3>
+          <div class="social-buttons">
+            <a href="#" target="_blank" class="btn-social">
+              <img src="assets/img/facebook.png" alt="Facebook">
+            </a>
+            <a href="#" target="_blank" class="btn-social">
+              <img src="assets/img/instagram.png" alt="Instagram">
+            </a>
+            <a href="#" target="_blank" class="btn-social">
+              <img src="assets/img/linkedin.png" alt="LinkedIn">
+            </a>
+          </div>
         </div>
+      </div>
     </div>
   </section>
 
@@ -198,17 +318,18 @@
       <p>&copy; 2025 Empresa. Todos los derechos reservados.</p>
       <nav class="footer-nav">
         <a href="#inicio" data-target="inicio">Inicio</a>
-        <a href="#vision" data-target="vision">Visión</a>
-        <a href="#mision" data-target="mision">Misión</a>
+        <a href="#vision" data-target="vision">Vision</a>
+        <a href="#mision" data-target="mision">Mision</a>
         <a href="#proyectos" data-target="proyectos">Proyectos</a>
         <a href="#equipo" data-target="equipo">Equipo</a>
-        <a href="#ubicacion" data-target="ubicacion">Ubicación</a>
         <a href="#contacto" data-target="contacto">Contacto</a>
+        <a href="#ubicacion" data-target="ubicacion">Ubicación</a>
       </nav>
     </div>
   </footer>
 
-  <script src="assets/js/scripts.js"></script>
-  <script src="assets/js/animations.js"></script> 
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/animations.js"></script>
 </body>
+
 </html>
